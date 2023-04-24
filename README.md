@@ -19,7 +19,5 @@
 
  - Faltou incluir/trocar/excluir
     - incluir data da compra
-    - incluir um campo para calcular valores entre datas diferente(desconto ou adição)
-    - trocar icone de exclusão
     - estilizar direito
     
