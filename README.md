@@ -1,5 +1,3 @@
-# Projeto_compras_fullstack_incompleto
-
 # Projeto Modelo Básico Full-Stack (Mysql, NodeJS, FrontEnd)
 ## Para executar
 - Clonar o projeto
