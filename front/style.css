@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    color: white;
+}
+
+header {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #7e00ff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./assets/background.jpg');
+    backdrop-filter: brightness(30%);
+}
+
+
+label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input {
+    max-width: 160px;
+    margin: 5px;
+    border: 1px solid #7e00ff;
+    border-radius: 5px;
+    font-size: small;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px #ccc;
+    color: black;
+}
+
+select {
+    max-width: 160px;
+    margin: 5px;
+    border: 1px solid #7e00ff;
+    border-radius: 5px;
+    font-size: small;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px #ccc;
+    color: black;
+}
+
+option{
+    color: black;
+}
+table {
+    margin: auto;
+ 
+}
+
+td, th {
+    padding: 8px;
+    text-align: center;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px;
+    height: 5vh;
+    width: 100vw;
+    border: 1px solid #7e00ff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 5px;
+    padding: 5px;
+}
+
+footer input {
+    margin-right: 200px;
+}
+
+main table {
+    width: 100vw;
+}
+
+main table tr td {
+    text-align: center;
+}
+
+button,
+input[type=submit] {
+    border: none;
+    background-color: #7e00ff;
+    border-radius: 5px;
+    font-size: small;
+    font-weight: bold;
+    padding: 5px;
+    color:#fff;
+    box-shadow: 1px 1px 3px #ccc;
+    cursor: pointer;
+}

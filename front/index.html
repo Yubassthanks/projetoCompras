@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <title>Compras de mercado</title>
+</head>
+
+<body>
+    <header>
+        <h1>Compras de mercado</h1>
+        <form id="cadastro">
+            <input type="text" name="id" id="id" required placeholder="Id" />
+            <input type="text" name="nome" id="nome" required placeholder="Nome" />
+            <input type="text" name="descricao" id="descricao" placeholder="Descricação" />
+            <input type="number" name="quantidade" id="quantidade" placeholder="Quantidade">
+            <select name="imagem" id="imagem">
+                <option value="maca.jpg"><img src="./assets/maca.jpg" alt="Imagem 1">maça</option>
+                <option value="banana.jpg"><img src="./assets/banana.jpg" alt="Imagem 2">banana</option>
+                <option value="carne.jpg"><img src="./assets/carne.jpg" alt="Imagem 3">carne</option>
+                <option value="linguica.jpg"><img src="./assets/linguica.jpg" alt="Imagem 3">linguica</option>
+                <option value="frango.jpg"><img src="./assets/frango.jpg" alt="Imagem 3">frango</option>
+                <option value="chocolate.jpg"><img src="./assets/chocolate.jpg" alt="Imagem 3">chocolate</option>
+            </select>
+            <input type="number" step="any" name="valor" id="valor" required placeholder="Valor" />
+            <input type="submit" value="Cadastrar" />
+        </form>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Imagem</th>
+                    <th>Valor</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="corpo"></tbody>
+        </table>
+    </main>
+    <footer>
+        <label for="total">Total:</label>
+        <input type="text" name="total" id="total" style="text-align: right;" readonly />
+    </footer>
+</body>
+<script src="index.js"></script>
+
+</html>
