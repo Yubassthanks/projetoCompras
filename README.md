@@ -8,8 +8,8 @@
 - baixar as dependencias
     - npm i express cors mysql
 - executar
-    - npm start //Ou
-    - nodemon //Ou
+    - npm start //ou
+    - nodemon // ou
     - node server.js
 - Acessar a pasta /front
     - Executar o index.html com Live Server
