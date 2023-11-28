@@ -2,7 +2,7 @@
 ## Para executar
 - Clonar o projeto
 - Abrir o XAMPP e dar start em MySQL
-- Rodar o script /docs/compra.sql no MariaDB ou PHPMuAdmin
+- Rodar o script /docs/compra.sql no MariaDB ou PHPMyAdmin
 - acessar a pasta /back
     - cd back
 - baixar as dependencias
@@ -17,7 +17,7 @@
     - Alterar (não concluído)
     - Para excluir produtos basta clicar no icone no canto direito e confirmar a exclusão
 
- - Faltou incluir/trocar/excluir
+ ## Faltando update
     - incluir data da compra
     - estilizar direito
 
