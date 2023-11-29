@@ -17,9 +17,11 @@
     - Alterar (não concluído)
     - Para excluir produtos basta clicar no icone no canto direito e confirmar a exclusão
     
-    # updates
-      Faltando update
+    ## Faltando
+     - update
     - incluir data da compra
     - estilizar direito
+ 
+  ## Adicionado
     - Retirado do html selection e options para adição de upload de imagem, que joga imagem para o cloudinary e banco de dados em forma de string http!
 
