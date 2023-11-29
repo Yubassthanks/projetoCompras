@@ -16,8 +16,9 @@
     - Para adicionar à lista de compras preencha os inputs clique em cadastrar!
     - Alterar (não concluído)
     - Para excluir produtos basta clicar no icone no canto direito e confirmar a exclusão
-
- ## Faltando update
+    
+    #updates
+      Faltando update
     - incluir data da compra
     - estilizar direito
     - Retirado do html selection e options para adição de upload de imagem, que joga imagem para o cloudinary e banco de dados em forma de string http!
