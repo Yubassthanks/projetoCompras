@@ -20,6 +20,5 @@
  ## Faltando update
     - incluir data da compra
     - estilizar direito
-
     ## Retirado do html selection e options para adição de upload de imagem, que joga imagem para o cloudinary e banco de dados em forma de string http!
 
