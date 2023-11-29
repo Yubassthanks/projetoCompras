@@ -17,7 +17,7 @@
     - Alterar (não concluído)
     - Para excluir produtos basta clicar no icone no canto direito e confirmar a exclusão
     
-    #updates
+    # updates
       Faltando update
     - incluir data da compra
     - estilizar direito
