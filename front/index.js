@@ -50,6 +50,9 @@ function montarTabela(vetor) {
         let col6 = document.createElement('td')
         let col7 = document.createElement('td')
         let del = document.createElement('button')
+        let update =  document.createElement('button')
+        update.innerHTML = '[Update]'
+        update.setAttribute('onclick', `updateItem('${e.id})`)
         del.innerHTML = '[Excluir]'
         del.setAttribute('onclick', `excluirItem('${e.id}')`)
         col1.innerHTML = e.id
@@ -75,6 +78,16 @@ function montarTabela(vetor) {
 function excluirItem(i) {
     if (confirm('Valida Exclusao'))
         fetch(uri + '/excluir/' + i, { method: 'DELETE' })
+            .then(resp => resp.status)
+            .then(resp => {
+                if (resp == 204) window.location.reload()
+                else alert('Erro ao enviar dados')
+            })
+}
+
+function updateItem(i) {
+    if (confirm('Validar atualização'))
+        fetch(uri + '/alterar/' + i, { method: 'UPDATE' })
             .then(resp => resp.status)
             .then(resp => {
                 if (resp == 204) window.location.reload()
