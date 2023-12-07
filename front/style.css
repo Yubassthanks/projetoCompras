@@ -63,21 +63,6 @@ input {
     color: black;
 }
 
-select {
-    max-width: 160px;
-    margin: 5px;
-    border: 1px solid #7e00ff;
-    border-radius: 5px;
-    font-size: small;
-    font-weight: bold;
-    box-shadow: 1px 1px 3px #ccc;
-    color: black;
-}
-
-option{
-    color: black;
-}
-
 tr td th {
     padding: 8px;
     text-align: center;

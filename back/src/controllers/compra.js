@@ -18,15 +18,17 @@ const criar = (req, res) => {
 }
 
 const listar = (req, res) => {
-    let compra = new Compra(req.params)
+    let compra = new Compra(req.params);
     con.query(compra.read(), (err, result) => {
-        if (err == null)
-            res.json(result).end()
-            else{
-                res.json(err).status(400).end()
-            }
-    })
-}
+        if (err == null) {
+            res.json(result).end();
+        } else {
+            console.error("Erro na Consulta:", err); // Adicione este log para verificar o erro
+            res.json(err).status(400).end();
+        }
+    });
+};
+
 
 const alterar = (req, res) => {
     let compra = new Compra(req.body)

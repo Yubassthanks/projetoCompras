@@ -14,12 +14,13 @@ fetch(uri + '/listar', { method: 'GET' })
 cadastro.addEventListener('submit', e => {
     e.preventDefault();
 
-
+    const date = new Date
     const body = {
         "id": cadastro.id.value,
         "nome": cadastro.nome.value,
         "descricao": cadastro.descricao.value,
         "quantidade": cadastro.quantidade.value,
+        "data": date,
         "imagem": urlimagem,
         "valor": cadastro.valor.value
     }
@@ -28,7 +29,7 @@ cadastro.addEventListener('submit', e => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
     };
-
+    console.log(body)
     options.body = JSON.stringify(body)
 
     fetch(uri + '/criar', options)
@@ -38,7 +39,6 @@ cadastro.addEventListener('submit', e => {
             else alert('Erro ao enviar dados')
         })
 })
-
 function montarTabela(vetor) {
     vetor.forEach(e => {
         let linha = document.createElement('tr')
@@ -50,18 +50,15 @@ function montarTabela(vetor) {
         let col6 = document.createElement('td')
         let col7 = document.createElement('td')
         let del = document.createElement('button')
-        let update =  document.createElement('button')
-        update.innerHTML = '[Update]'
-        update.setAttribute('onclick', `updateItem('${e.id})`)
         del.innerHTML = '[Excluir]'
         del.setAttribute('onclick', `excluirItem('${e.id}')`)
         col1.innerHTML = e.id
         col2.innerHTML = e.nome
         col3.innerHTML = e.descricao
         col4.innerHTML = e.quantidade
-        col5.innerHTML = `<img src="${e.imagem}" alt="${e.nome}" width="100" "gap=10px" />`;
-        col6.innerHTML = e.valor
-        col7.appendChild(del)
+        col5.innerHTML = e.data
+        col6.innerHTML = `<img src="${e.imagem}" alt="${e.nome}" width="100" "gap=10px" />`;
+        col7.innerHTML = e.valor
         linha.appendChild(col1)
         linha.appendChild(col2)
         linha.appendChild(col3)
@@ -69,11 +66,13 @@ function montarTabela(vetor) {
         linha.appendChild(col5)
         linha.appendChild(col6)
         linha.appendChild(col7)
+        linha.appendChild(del)
         corpo.appendChild(linha)
         valTotal += e.quantidade * e.valor
         total.value = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valTotal)
     });
 }
+
 
 function excluirItem(i) {
     if (confirm('Valida Exclusao'))
@@ -85,15 +84,6 @@ function excluirItem(i) {
             })
 }
 
-function updateItem(i) {
-    if (confirm('Validar atualização'))
-        fetch(uri + '/alterar/' + i, { method: 'UPDATE' })
-            .then(resp => resp.status)
-            .then(resp => {
-                if (resp == 204) window.location.reload()
-                else alert('Erro ao enviar dados')
-            })
-}
 function convertToBase64() {
     // Obtém o elemento de input
     const input = document.getElementById('imageInput');

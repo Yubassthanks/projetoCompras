@@ -8,6 +8,7 @@ CREATE TABLE compra(
     nome varchar(50) NOT NULL,
     descricao text,
     quantidade INT NOT NULL,
+    data DATE NOT NULL,
     imagem varchar(100) NOT NULL,
     valor decimal(10,2) not null
 );

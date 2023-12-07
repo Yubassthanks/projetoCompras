@@ -5,13 +5,15 @@ class Compra {
         this.nome = i.nome
         this.descricao = i.descricao
         this.quantidade = i.quantidade
+        this.data = i.data
         this.imagem = i.imagem
         this.valor = i.valor
     }
 
     create() {
-        return `INSERT INTO compra VALUE('${this.id}','${this.nome}','${this.descricao}',${this.quantidade}, '${this.imagem}',${this.valor})`
+        return `INSERT INTO compra VALUES('${this.id}','${this.nome}','${this.descricao}',${this.quantidade}, '${this.data}', '${this.imagem}', ${this.valor})`;
     }
+    
 
     read() {
         if (this.id == undefined)
@@ -21,9 +23,8 @@ class Compra {
     }
 
     update() {
-        return `UPDATE compra SET nome = '${this.nome}', descricao = '${this.descricao}', valor = ${this.valor} WHERE id = '${this.id}'`
-    }
-
+        return `UPDATE compra SET nome = '${this.nome}', descricao = '${this.descricao}', quantidade = ${this.quantidade}, data = '${this.data}', imagem = '${this.imagem}', valor = ${this.valor} WHERE id = '${this.id}'`;
+    }    
     delete() {
         return `DELETE FROM compra WHERE id = '${this.id}'`
     }
