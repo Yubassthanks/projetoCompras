@@ -17,7 +17,6 @@
     - Para excluir produtos basta clicar no icone no canto direito e confirmar a exclusão
     
     ## Faltando
-    - incluir data da compra
     - estilizar direito
  
   ## Adicionado
